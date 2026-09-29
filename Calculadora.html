@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Simulador - Canto do Churrasqueiro</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="visualSimulador.css" />
+  </head>
+
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <header
+      class="bg-dark text-white border-bottom border-danger border-4 sticky-top"
+    >
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold fs-3 text-danger" href="inicio.html">
+          Canto do Churrasqueiro 🔥
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="simulador.html"
+                >Simulador</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+      <div class="row g-4 justify-content-center">
+        <section class="simulador col-lg-6">
+          <div class="card shadow border-0 rounded-4">
+            <div class="card-header bg-danger text-white p-3 rounded-top-4">
+              <h2 class="h4 mb-0 fw-bold">
+                <i class="bi bi-calculator me-2"></i>Simulador de Churrasco
+              </h2>
+            </div>
+            <div class="card-body p-4">
+              <p class="text-muted mb-4">
+                Informe os dados do seu churrasco para calcular os suprimentos:
+              </p>
+
+              <div class="campo mb-3">
+                <label for="adultos" class="form-label fw-bold">Adultos:</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-white"
+                    ><i class="bi bi-people-fill text-danger"></i
+                  ></span>
+                  <input
+                    type="number"
+                    id="adultos"
+                    class="form-control"
+                    min="0"
+                    placeholder="Ex: 10"
+                  />
+                </div>
+              </div>
+
+              <div class="campo mb-3">
+                <label for="criancas" class="form-label fw-bold"
+                  >Crianças:</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text bg-white"
+                    ><i class="bi bi-emoji-smile-fill text-danger"></i
+                  ></span>
+                  <input
+                    type="number"
+                    id="criancas"
+                    class="form-control"
+                    min="0"
+                    placeholder="Ex: 5"
+                  />
+                </div>
+              </div>
+
+              <div class="campo mb-4">
+                <label for="duracao" class="form-label fw-bold">Duração:</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-white"
+                    ><i class="bi bi-clock-fill text-danger"></i
+                  ></span>
+                  <select id="duracao" class="form-select">
+                    <option value="3">3 horas</option>
+                    <option value="4">4 horas</option>
+                    <option value="5">5 horas</option>
+                    <option value="6">6 horas ou mais</option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                id="calcular"
+                class="btn btn-danger w-100 btn-lg fw-bold shadow-sm py-2"
+              >
+                🔥 Calcular churrasco
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAINEL DE RESULTADOS -->
+        <section class="resultado col-lg-6">
+          <div class="card shadow border-0 rounded-4 h-100">
+            <div class="card-header bg-dark text-white p-3 rounded-top-4">
+              <h2 class="h4 mb-0 fw-bold text-danger">
+                <i class="bi bi-basket-fill me-2"></i>Resultado
+              </h2>
+            </div>
+            <div
+              class="card-body p-4 d-flex flex-column justify-content-around"
+            >
+              <div class="list-group list-group-flush">
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3 mb-2"
+                >
+                  <span>🥩 Carne:</span>
+                  <strong id="carne" class="fs-5 text-danger">0 kg</strong>
+                </div>
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3 mb-2"
+                >
+                  <span>🌭 Linguiça:</span>
+                  <strong id="linguica" class="fs-5 text-danger">0 kg</strong>
+                </div>
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3 mb-2"
+                >
+                  <span>🍗 Frango:</span>
+                  <strong id="frango" class="fs-5 text-danger">0 kg</strong>
+                </div>
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3 mb-2"
+                >
+                  <span>🥖 Pão de alho:</span>
+                  <strong id="pao" class="fs-5 text-danger">0 unidades</strong>
+                </div>
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3 mb-2"
+                >
+                  <span>🥤 Refrigerante:</span>
+                  <strong id="refrigerante" class="fs-5 text-primary"
+                    >0 litros</strong
+                  >
+                </div>
+                <div
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 border-0 bg-light rounded-3"
+                >
+                  <span>🍺 Cerveja:</span>
+                  <strong id="cerveja" class="fs-5 text-warning"
+                    >0 latas</strong
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer
+      class="bg-dark text-white text-center py-3 mt-auto border-top border-secondary"
+    >
+      <div class="container">
+        <p class="mb-0 text-secondary">&copy; 2026 Canto do Churrasqueiro</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sistema.js"></script>
+  </body>
+</html>
