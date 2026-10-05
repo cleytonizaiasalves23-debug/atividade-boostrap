@@ -95,32 +95,35 @@ Utilizado para adicionar ícones e melhorar a apresentação visual da aplicaç�
 
 ---
 
- 📱 Responsividade
+### 📱 Responsividade
 
 O projeto utiliza recursos do Bootstrap 5 para adaptar o conteúdo a diferentes tamanhos de tela.
-
 Dessa forma, os elementos da página podem se reorganizar para proporcionar uma melhor experiência em celulares, tablets e computadores
+
+
 ---
-♿ Acessibilidade
+### ♿ Acessibilidade
 
 Durante o desenvolvimento foram considerados alguns cuidados básicos de acessibilidade, como:
+  Utilização de textos claros;
+  Organização dos títulos;
+  Utilização de elementos HTML;
+  Contraste entre textos e fundo;
+  Botões e links identificados de forma clara;
+  Utilização do atributo alt nas imagens.
 
-Utilização de textos claros;
-Organização dos títulos;
-Utilização de elementos HTML;
-Contraste entre textos e fundo;
-Botões e links identificados de forma clara;
-Utilização do atributo alt nas imagens.
+
 ---
-🧩 Dificuldades Encontradas
+### 🧩 Dificuldades Encontradas
 
 Durante o desenvolvimento do projeto, algumas dificuldades foram encontradas principalmente na organização dos elementos da página e na adaptação do layout para diferentes tamanhos de tela.
 
 Também foi necessário utilizar JavaScript para desenvolver a lógica da calculadora e realizar os cálculos de acordo com as informações fornecidas pelo usuário.
 
 O Bootstrap ajudou na organização dos elementos e na criação do layout responsivo.
+
 ---
-🔮 Melhorias Futuras
+### 🔮 Melhorias Futuras
 
 Algumas funcionalidades podem ser adicionadas futuramente ao projeto:
 
